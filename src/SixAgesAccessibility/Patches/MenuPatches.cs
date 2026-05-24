@@ -166,6 +166,14 @@ namespace SixAgesAccessibility.Patches
         // Seconds (not frames) so it is framerate-independent.
         private const float TutorialFlushDelaySeconds = 0.35f;
 
+        // Single-topic blocks (the common case — main intro, hint cards, etc.) do not
+        // need the chain-protection delay: with only one topic buffered there is nothing
+        // for a follow-up topic to "cut off". Flush on the very next Update() so the
+        // user hears the text without the 0.35 s of silence baked in for chains.
+        // Chained trainer topics that arrive in the same frame are already in the buffer
+        // by the next Update(), so Count > 1 picks the longer delay automatically.
+        private const float TutorialFlushDelaySecondsSingle = 0f;
+
         /// <summary>Announce tutorial content when topic is set or changes.</summary>
         [HarmonyPatch(typeof(TutorialController), "UpdateToCurrentTopic")]
         [HarmonyPostfix]
@@ -254,7 +262,10 @@ namespace SixAgesAccessibility.Patches
             try
             {
                 if (!_blockPending) return;
-                if (Time.realtimeSinceStartup - _blockLastTopicTime < TutorialFlushDelaySeconds)
+                float delay = _blockTopicTexts.Count <= 1
+                    ? TutorialFlushDelaySecondsSingle
+                    : TutorialFlushDelaySeconds;
+                if (Time.realtimeSinceStartup - _blockLastTopicTime < delay)
                     return;
 
                 _blockPending = false;

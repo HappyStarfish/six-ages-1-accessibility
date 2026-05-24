@@ -54,56 +54,56 @@ namespace SixAgesAccessibility
             Loc.Register("The game sometimes shows hint cards. The mod reads "
                 + "them aloud automatically. Press H to hear the current hint again.",
                 "Das Spiel zeigt manchmal Hinweis-Karten. Die Mod liest sie automatisch "
-                + "vor. Mit der Taste H hörst du den aktuellen Hinweis noch einmal.");
+                + "vor. Mit der Taste H hört ihr den aktuellen Hinweis noch einmal.");
             Loc.Register("In a decision, move through the response options with "
                 + "the arrow keys. Enter selects the current response.",
-                "In einer Entscheidung gehst du die Antwortmöglichkeiten mit den "
+                "In einer Entscheidung geht ihr die Antwortmöglichkeiten mit den "
                 + "Pfeiltasten durch. Enter wählt die aktuelle Antwort aus.");
             Loc.Register("To choose a person for a task, move through the candidates "
                 + "with the arrow keys. Space selects the person, Enter confirms. D reads "
                 + "their life story.",
-                "Eine Person für eine Aufgabe wählst du so: mit den Pfeiltasten durch die "
+                "Eine Person für eine Aufgabe wählt ihr so: mit den Pfeiltasten durch die "
                 + "Kandidaten gehen, Leertaste wählt die Person aus, Enter bestätigt. "
                 + "D liest die Lebensbeschreibung.");
             Loc.Register("In the clan ring, Tab switches between the list of "
                 + "people and the ring. In the list, Space puts a person into the ring or "
                 + "removes them, C makes them chieftain. Enter applies the new arrangement.",
-                "Im Klan-Ring wechselst du mit Tab zwischen Personenliste und Ring. In der "
+                "Im Klan-Ring wechselt ihr mit Tab zwischen Personenliste und Ring. In der "
                 + "Liste setzt die Leertaste eine Person in den Ring oder nimmt sie heraus, "
                 + "C macht sie zum Häuptling. Enter wendet die neue Ordnung an.");
             Loc.Register("Switch between the management screens with Ctrl and "
                 + "a number from 1 to 9. Ctrl with Tab moves through them in order.",
-                "Zwischen den Verwaltungs-Bildschirmen wechselst du mit Strg und einer "
+                "Zwischen den Verwaltungs-Bildschirmen wechselt ihr mit Strg und einer "
                 + "Zahl von 1 bis 9. Strg mit Tab wechselt der Reihe nach.");
             Loc.Register("Open a screen's help with F1 and move through it section by "
                 + "section with the arrow keys. Shift F1 lists the mod's keys.",
-                "Die Hilfe zu einem Bildschirm öffnest du mit F1 und gehst sie mit den "
-                + "Pfeiltasten Abschnitt für Abschnitt durch. Shift F1 nennt dir die "
+                "Die Hilfe zu einem Bildschirm öffnet ihr mit F1 und geht sie mit den "
+                + "Pfeiltasten Abschnitt für Abschnitt durch. Shift F1 nennt euch die "
                 + "Tasten der Mod.");
             Loc.Register("Management screens show figures, lists and buttons. "
                 + "Tab switches between the areas. Shift F1 lists the keys this screen has.",
                 "Verwaltungs-Bildschirme zeigen Werte, Listen und Knöpfe. Mit Tab "
-                + "wechselst du zwischen den Bereichen. Welche Tasten der Bildschirm hat, "
-                + "nennt dir Shift F1.");
+                + "wechselt ihr zwischen den Bereichen. Welche Tasten der Bildschirm hat, "
+                + "nennt euch Shift F1.");
             Loc.Register("Advance time with the S key — that is the game's Season "
                 + "button. An action costs half a season.",
-                "Die Zeit rückst du mit der Taste S vor — das ist der ‚Saison'-Knopf des "
+                "Die Zeit rückt ihr mit der Taste S vor — das ist der ‚Saison'-Knopf des "
                 + "Spiels. Eine Aktion kostet eine halbe Saison.");
             Loc.Register("Press F3 to hear your advisors' take on a scene. Each "
                 + "advisor also reads out the responses they consider sensible — that "
                 + "can be none, one, several or all of them, depending on the advisor "
                 + "and the situation. Shift F3 gives you information about the advisor.",
-                "Den Rat deiner Berater zu einer Szene hörst du mit F3. Jeder Berater "
-                + "liest dir auch die Antworten vor, die er für sinnvoll hält — das "
+                "Den Rat eurer Berater zu einer Szene hört ihr mit F3. Jeder Berater "
+                + "liest euch auch die Antworten vor, die er für sinnvoll hält — das "
                 + "können keine, eine, mehrere oder alle sein, je nach Berater und "
-                + "Lage. Shift F3 nennt dir Infos zum Berater.");
+                + "Lage. Shift F3 nennt euch Infos zum Berater.");
             Loc.Register("You hear your clan's magic on the Magic screen. F4 also "
                 + "steps through the concerns and the active magic.",
-                "Die Magie deines Klans hörst du auf dem Magie-Bildschirm. Mit F4 gehst "
-                + "du außerdem die Belange und die aktive Magie durch.");
+                "Die Magie eures Klans hört ihr auf dem Magie-Bildschirm. Mit F4 geht "
+                + "ihr außerdem die Belange und die aktive Magie durch.");
             Loc.Register("Delete a save in the saved-games list with the Delete key — "
                 + "pressing it twice within three seconds confirms.",
-                "Einen Spielstand löschst du in der Spielstand-Liste mit der "
+                "Einen Spielstand löscht ihr in der Spielstand-Liste mit der "
                 + "Entfernen-Taste — zweimal binnen drei Sekunden bestätigt das Löschen.");
             Loc.Register("Tutorial reset. The mod's hints will appear again.",
                 "Tutorial zurückgesetzt. Die Hinweise der Mod erscheinen wieder.");
@@ -497,22 +497,12 @@ namespace SixAgesAccessibility
             Loc.Register("Sound Effects", "Soundeffekte");
             Loc.Register("Show Tips", "Tipps anzeigen");
             Loc.Register("RESET TIPS", "Tipps zurücksetzen");
-            // The "CHOOSE" button in ControlsOverlay opens a file browser for the
-            // StormAge folder from Six Ages 1 (Ride Like the Wind) — picking it lets
-            // this game continue from a RLTW victory save. The bare label "Auswählen"
-            // gives no hint of that, so spell it out for the screen reader.
-            Loc.Register("CHOOSE", "Ordner für Vorgängerspiel wählen");
             Loc.Register("Volume", "Lautstärke");
-
-            // StormAge folder picker bypass — replaces SimpleFileBrowser, see
-            // MenuPatches.PickContinuationFolder_Prefix for the rationale.
-            Loc.Register(
-                "To set the previous-game folder, copy the full path of your StormAge folder to the clipboard and activate this button again. The folder must be named StormAge.",
-                "Um den Vorgängerspiel-Ordner zu setzen, kopiere den vollständigen Pfad deines StormAge-Ordners in die Zwischenablage und drücke diesen Knopf nochmal. Der Ordner muß StormAge heißen.");
-            Loc.Register("The folder must be named StormAge, but got: ",
-                "Der Ordner muß StormAge heißen, ist aber: ");
-            Loc.Register("Folder not found: ", "Ordner nicht gefunden: ");
-            Loc.Register("Previous-game folder set to ", "Vorgängerspiel-Ordner gesetzt auf ");
+            // LGO-only: the "CHOOSE" button override and the StormAge folder-picker
+            // strings were here in the SA2 mod (CHOOSE opens a previous-game folder
+            // picker so LGO can continue a finished RLTW save). RLTW IS that previous
+            // game — no PickContinuationFolder, no CHOOSE button on its ControlsOverlay,
+            // no folder-picker bypass needed. The whole block is intentionally omitted.
 
             // Scene/News/Battle prefixes (KeyboardNavigationHandler, CombatScreenReader)
             Loc.Register("Result: ", "Ergebnis: ");
@@ -879,10 +869,10 @@ namespace SixAgesAccessibility
                 "Hoch und Runter wechseln Kandidaten. F ändert die Sortierung, Leertaste schaltet die Ring-Zugehörigkeit um, C schaltet den Häuptling um, D liest Rat und volle Informationen, Tab wechselt zu den Ring-Plätzen, F5 liest den Ring-Status. Eingabe organisiert um, Escape schließt.");
             // ReorganizeNavigator.BuildReorganizeSummary — two-step Enter confirmation.
             Loc.Register("You choose {0} as chief, with {1} in the ring.",
-                "Du wählst {0} als Häuptling, dazu {1} im Ring.");
-            Loc.Register("You choose {0} as chief.", "Du wählst {0} als Häuptling.");
-            Loc.Register("You put {0} in the ring.", "Du nimmst {0} in den Ring.");
-            Loc.Register("You change nothing.", "Du änderst nichts.");
+                "Ihr wählt {0} als Häuptling, dazu {1} im Ring.");
+            Loc.Register("You choose {0} as chief.", "Ihr wählt {0} als Häuptling.");
+            Loc.Register("You put {0} in the ring.", "Ihr nehmt {0} in den Ring.");
+            Loc.Register("You change nothing.", "Ihr ändert nichts.");
 
             // ---- PersonBio (localized port of Person.AttributedTextFor) ----
             // Shared by Reorganize / ChooseLeader / Caravan / Map / AdvisorReader.
@@ -1016,8 +1006,8 @@ namespace SixAgesAccessibility
             Loc.Register("Tab cycles zones: blessings, sliders. Up and Down navigate the active zone, Space selects a blessing, Left and Right adjust sliders, D reads details. Enter sacrifices, Escape closes.",
                 "Tab wechselt Bereiche: Segen, Schieber. Hoch und Runter navigieren den aktiven Bereich, Leertaste wählt einen Segen, Links und Rechts stellen Schieber ein, D liest Details. Eingabe opfert, Escape schließt.");
             // SacrificeNavigator.BuildSacrificeSummary — two-step Enter confirmation.
-            Loc.Register("You sacrifice to {0}: {1}", "Du opferst an {0}: {1}");
-            Loc.Register("You sacrifice {0}", "Du opferst {0}");
+            Loc.Register("You sacrifice to {0}: {1}", "Ihr opfert an {0}: {1}");
+            Loc.Register("You sacrifice {0}", "Ihr opfert {0}");
             Loc.Register(" for {0} goods and {1} herds.", " für {0} Güter und {1} Herden.");
             Loc.Register(" for {0} goods.", " für {0} Güter.");
             Loc.Register(" for {0} herds.", " für {0} Herden.");
@@ -1615,8 +1605,8 @@ namespace SixAgesAccessibility
             Loc.Register("Cannot fortify yet. Pick a buildable fortification you can afford.",
                 "Befestigen noch nicht möglich. Wählt eine baubare Befestigung, die ihr euch leisten könnt.");
             Loc.Register("a fortification", "eine Befestigung");
-            Loc.Register("You build {0}.", "Du baust {0}.");
-            Loc.Register("You build {0}. {1}.", "Du baust {0}. {1}.");
+            Loc.Register("You build {0}.", "Ihr baut {0}.");
+            Loc.Register("You build {0}. {1}.", "Ihr baut {0}. {1}.");
             Loc.Register("Fortify status. ", "Befestigen-Status. ");
             Loc.Register(" buildable, ", " baubare, ");
             Loc.Register(" existing. ", " bestehende. ");
@@ -1878,44 +1868,44 @@ namespace SixAgesAccessibility
             Loc.Register(", escorted by {0} warrior", ", begleitet von {0} Krieger");
             Loc.Register(", escorted by {0} warriors", ", begleitet von {0} Kriegern");
             // SpiritNavigator.BuildBargainSummary
-            Loc.Register("You bargain for {0} via {1}.", "Du verhandelst um {0} mit dem Ansatz {1}.");
+            Loc.Register("You bargain for {0} via {1}.", "Ihr verhandelt um {0} mit dem Ansatz {1}.");
             // ChooseLeaderNavigator.BuildChooseSummary
-            Loc.Register("You choose {0} as leader.", "Du wählst {0} als Anführer.");
-            Loc.Register("You choose no one.", "Du wählst niemanden.");
+            Loc.Register("You choose {0} as leader.", "Ihr wählt {0} als Anführer.");
+            Loc.Register("You choose no one.", "Ihr wählt niemanden.");
             // WarriorsNavigator.BuildWarriorsSummary — DE uses identical Singular/Plural
             // forms ("ein Krieger"/"zwei Krieger") so both keys map to the same string.
-            Loc.Register("You recruit {0} warrior.", "Du rekrutierst {0} Krieger.");
-            Loc.Register("You recruit {0} warriors.", "Du rekrutierst {0} Krieger.");
-            Loc.Register("You dismiss {0} warrior.", "Du entlässt {0} Krieger.");
-            Loc.Register("You dismiss {0} warriors.", "Du entlässt {0} Krieger.");
+            Loc.Register("You recruit {0} warrior.", "Ihr rekrutiert {0} Krieger.");
+            Loc.Register("You recruit {0} warriors.", "Ihr rekrutiert {0} Krieger.");
+            Loc.Register("You dismiss {0} warrior.", "Ihr entlasst {0} Krieger.");
+            Loc.Register("You dismiss {0} warriors.", "Ihr entlasst {0} Krieger.");
             // RaidNavigator.BuildRaidSummary
-            Loc.Register("You raid {0}", "Du überfällst {0}");
+            Loc.Register("You raid {0}", "Ihr überfallt {0}");
             Loc.Register(" with {0} warrior", " mit {0} Krieger");
             Loc.Register(" with {0} warriors", " mit {0} Kriegern");
             Loc.Register(", helped by {0}", ", unterstützt von {0}");
             // EmissaryNavigator.BuildEmissarySummary
-            Loc.Register("You send an emissary to {0}", "Du sendest einen Gesandten zu {0}");
+            Loc.Register("You send an emissary to {0}", "Ihr sendet einen Gesandten zu {0}");
             Loc.Register(", with gifts of {0}", ", mit Geschenken: {0}");
             Loc.Register("{0} goods", "{0} Güter");
             Loc.Register("{0} herds", "{0} Herden");
             Loc.Register("{0} horses", "{0} Pferde");
             // CaravanNavigator.BuildCaravanSummary
             Loc.Register("You send a caravan to {0} to trade, led by {1}",
-                "Du sendest eine Karawane zu {0} zum Handeln, angeführt von {1}");
+                "Ihr sendet eine Karawane zu {0} zum Handeln, angeführt von {1}");
             Loc.Register("You send a caravan to {0} to establish a trade route, led by {1}",
-                "Du sendest eine Karawane zu {0}, um eine Handelsroute zu errichten, angeführt von {1}");
+                "Ihr sendet eine Karawane zu {0}, um eine Handelsroute zu errichten, angeführt von {1}");
             Loc.Register(", selling {0}", ", verkauft {0}");
             Loc.Register(", buying {0}",  ", kauft {0}");
             // MapScreenNavigator.BuildExpeditionSummary
-            Loc.Register("You send an expedition to {0}", "Du sendest eine Expedition nach {0}");
+            Loc.Register("You send an expedition to {0}", "Ihr sendet eine Expedition nach {0}");
             Loc.Register(", goal {0}", ", Ziel {0}");
             Loc.Register(", with {0} warrior", ", mit {0} Krieger");
             Loc.Register(", with {0} warriors", ", mit {0} Kriegern");
             // SacredTimeNavigator.BuildAllocationSummary
             Loc.Register("You allocate no magic. Reserve {0} unused.",
-                "Du verteilst keine Magie. {0} Reserve unangetastet.");
+                "Ihr verteilt keine Magie. {0} Reserve unangetastet.");
             Loc.Register("You allocate magic: {0}. Reserve {1} of {2} unused.",
-                "Du verteilst Magie: {0}. Reserve {1} von {2} ungenutzt.");
+                "Ihr verteilt Magie: {0}. Reserve {1} von {2} ungenutzt.");
         }
     }
 }

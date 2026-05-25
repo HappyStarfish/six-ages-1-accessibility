@@ -3968,6 +3968,7 @@ namespace SixAgesAccessibility
                 sb.Append(Loc.Get("Keys for the Map. "))
                   .Append(Hints.TabZones)
                   .Append(Loc.Get("G focuses the target zone, K the target list, X the foray panel. Enter sends the mission, Escape cancels. "))
+                  .Append(Loc.Get("In the hex cursor zone, Page Up and Down jump between points of interest, Ctrl with them switches category. "))
                   .Append(Hints.Arrows).Append(Hints.Describe)
                   .Append(Hints.ManagementSwitch).Append(Hints.Season);
                 ScreenReader.Say(sb.ToString());
